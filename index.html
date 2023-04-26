@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Danh Giang Thanh</title>
+    <style>
+        #id1 img{ height: 300px;}
+        img{height: 200px; margin: 5px; border-style: solid; border-color: aqua;}
+    </style>
+    <script>
+        function F1(){
+            var tam = document.getElementById('id1');
+            var arrImg = tam.getElementsByTagName('img');
+            arrImg[0].src = 'img/5.jpg'
+            var arrImg2 = document.getElementsByTagName('img');
+            console.log('So hinh trong trang ',arrImg2.length)
+        }
+        function F2(){
+            document.getElementsByTagName('title')[0].innerHTML=v;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Test DOM" onclick="F1()">
+    <input type="text" onkeyup="F2(this.value)">
+    <div id="id1">
+        <img src="./img/1.jpg" alt="">
+        <img src="./img/2.jpg" alt="">
+        <img src="./img/3.jpg" alt="">
+        <img src="./img/4.jpg" alt="">
+        <img src="./img/5.jpg" alt="">
+    </div>
+    <img src="./img/3.jpg" alt="">
+</body>
+</html>

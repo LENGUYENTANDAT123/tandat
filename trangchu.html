@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Danh Giang Thanh</title>
+    <style>
+        #banner img{height: 600px; width: 700px;border-style: solid;border-color: aqua;}
+    </style>
+    <script>
+        var arrImg = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg'];
+        var n = 0;
+        function F1()
+        {
+            if(n==5) n=0;
+            let banner = document.getElementById('banner');
+            let s = "<img src='img/" + arrImg[n] + "'>";
+            banner.innerHTML=s;
+            n++;
+        }
+    </script>
+</head>
+<body onload="setInterval(F1 , 300)">
+    <div id="banner">
+        <img src="./img/1.jpg" alt="">
+    </div>
+</body>
+</html>

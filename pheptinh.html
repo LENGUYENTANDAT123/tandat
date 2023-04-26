@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh Toan</title>
+    <style>
+        #a{
+            border-style: solid; border-color: white ;text-align: center; 
+        }
+        #b{
+            border-style: solid; border-color: white; text-align: center;
+        }
+    </style>
+    <script>
+        function F1()
+        {
+            let a = document.f1.a.value;
+            let b = document.forms[0].b.value;
+            let arrPT = document.forms['f1'].pt;
+            let pheptoan = '';
+            for(i=0; i<arrPT.length;i++)
+                if(arrPT[i].checked)
+                    pheptoan = arrPT[i].value;
+            if(pheptoan=='+')
+                document.f1.ketqua.value = a*1+b*1;
+            if(pheptoan=='-')
+                document.f1.ketqua.value = a-b;
+            if(pheptoan=='*')
+                document.f1.ketqua.value = a*b;
+            if(pheptoan=='/')
+                document.f1.ketqua.value = a/b;
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="f1" id="a">
+        a <input type="number" name="a" id=""> <br>
+        b <input type="number" name="b" id=""> <br>
+        --- Phép Toán --- <br>
+        cộng : <input type="radio" value="+" name="pt" > <br>
+        trừ :  <input type="radio" value="-" name="pt" > <br>
+        nhân : <input type="radio" value="*" name="pt" > <br>
+        chia : <input type="radio" value="/" name="pt" >  <br>
+        <input type="button" value="Tinh" onclick="F1()"> <br>
+        <input type="text" name="ketqua" >
+    </form> <hr>
+    <form action="" name="f2" id="b">
+        <input type="text" name="a">
+    </form>
+</body>
+</html>
